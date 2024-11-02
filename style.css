@@ -115,8 +115,9 @@ h1{
 #services{
     padding: 40px;
     text-align: center;
-    background: black;
     height: 100%;
+    
+    background: black;
 }
 .service-list{
     background-color: white;
@@ -136,7 +137,6 @@ h1{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-   
 }
 
 
@@ -167,6 +167,48 @@ h3{
     justify-content: flex-start;
     padding: 20px;
 }
+
+#aboutUs{
+    padding: 40px;
+    background-image: url('images/bg-image.avif');
+    background-size: cover;
+}
+.aboutUs-head{
+    color: black;
+    text-align: center;
+}
+.aboutUs-img{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.about-container{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+.about-flexbox{
+    background: rgb(180, 178, 178, 0.6);
+    padding: 30px;
+    font-family: 'Arial';
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.company-name{
+    color: blue;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
 
 
 
