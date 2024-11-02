@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -49,31 +53,55 @@ nav ul li a{
 nav ul li a:hover{
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
+    float: right; 
+}
+
+#contact_us{
+    font-size: 14px;
+    color: #fff;
+    background-color: blue;
+    border-radius: 20px;
+    border-width: 0px;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+    margin-left: 30px;
+}
+#contact_us:hover{
+    background: white;
+    color: blue;
+    border-width: 5px;
+    border-color: blue;
+    border-radius: 20px;
+    float: right; 
 }
 
 #home{
     background-image: url('images/home_page.jpg');
     width: 100%;
-    height: 500px;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid white;
 }
 h1{
     font-family: 'Segoe Script' ;
     font-style: italic;
     color: white;
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .heading{
     font-family: 'Arial';
-    font-size: 50px;
+    font-size: 65px;
 
 }
 
@@ -84,7 +112,61 @@ h1{
     text-transform: uppercase;
 }
 
+#services{
+    padding: 40px;
+    text-align: center;
+    background: black;
+    height: 100%;
+}
+.service-list{
+    background-color: white;
+    border: 1px aqua solid;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    box-shadow: 2px 3px aqua;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+.service-item{
+    height: 100%;
+    width: 500px;
+    background-color: rgb(236, 233, 233);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+   
+}
 
+
+h2{
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Georgia';
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.serviceImg{
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 20px;
+}
+h3{
+    font-family: 'Arial';
+    font-size: 30px;
+    font-weight: bold;
+}
+.blog_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
 
 
 
@@ -112,3 +194,4 @@ h1{
 .slideInTop{
     animation: slideInTop 1s ease-in;
 }
+
