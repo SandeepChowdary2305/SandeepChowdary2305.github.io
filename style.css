@@ -99,6 +99,7 @@ h1{
     text-transform: uppercase;
     text-align: center;
     animation: slideInLeft 1s ease;
+    animation-delay: 1s;
 }
 
 .heading{
@@ -122,12 +123,7 @@ h1{
     background: black;
 }
 .service-list{
-    background-color: white;
-    border: 1px aqua solid;
-    border-radius: 20px;
     padding: 50px;
-    display: flex;
-    box-shadow: 2px 3px aqua;
     display: flex;
     justify-content: space-around;
     margin: 30px;
@@ -178,6 +174,9 @@ h3{
     padding: 40px;
     background-image: url('images/bg-image.avif');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .aboutUs-head{
     color: black;
@@ -189,14 +188,14 @@ h3{
 }
 .about-container{
     display: flex;
-    border: 1px solid black;
+    box-shadow: -5px 10px gray;
     border-radius: 20px;
     animation: slideInRight 1s;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
 .about-flexbox{
-    background: rgb(180, 178, 178, 0.6);
+    background: rgba(226, 224, 224, 0.6);
     padding: 30px;
     font-family: 'Arial';
     color: black;
@@ -210,8 +209,110 @@ h3{
     font-weight: bolder;
 }
 
+.tool-container{
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    column-gap: 40px;
+    row-gap: 40px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+.tool-box{
+    border: 3px solid white;
+    box-shadow: -5px 5px gray;
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(83, 165, 253, 0.6);
+    animation: slideInTop 1s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+.tool-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+}
+
 .icon{
     font-size: 50px;
+}
+.icon-text{
+    font-family: 'Roboto';
+    font-weight: bold;
+    margin-left: 50px;
+    font-style: normal;
+    font-size: 40px;
+}
+div.tool-box p , ul{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Arial';
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column p, .footer-column a {
+    color: #ddd;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+
+.social-links a {
+    margin-right: 10px;
+    color: #ddd;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: #ccc;
+    font-size: 0.8rem;
 }
 
 
@@ -245,7 +346,19 @@ h3{
     to{
         opacity: 1;
         clip-path: inset(0 0 0 0);
-        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+}
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+        transform: translateY(-300px);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateX(0px);
     }
 }
 
