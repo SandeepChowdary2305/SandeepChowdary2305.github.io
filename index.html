@@ -14,7 +14,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#aboutUs">About us</a></li>
-            <li><button id="contact_us">Contact us</button></li>
+            <li><button id="contact_us" onclick="document.querySelector('.popup-overlay').style.display = 'flex';">Contact us</button></li>
             
         </ul>
         
@@ -23,8 +23,20 @@
         <section id="home">
             <h1>welcome to<br><spam class="heading">IT Consulting</spam></h1>
             <p class="home-description slideInTop">Optimize your business with expert IT consulting services that provide you with personalized technology solutions.</p>
-            <button id="contact_us">Contact us</button>
+            <button id="contact_us" onclick="document.querySelector('.popup-overlay').style.display = 'flex';">Contact us</button>
         </section>
+        <div class="popup-overlay" onclick="document.querySelector('.popup-overlay').style.display = 'none';">
+            <div class="popup-form" onclick="event.stopPropagation();">
+                <button class="close-btn" onclick="document.querySelector('.popup-overlay').style.display = 'none';">×</button>
+                <h2 class="contact-heading">Contact Us</h2>
+                <form action="https://formspree.io/f/sandeepnani2305@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
         <section id="services">
             <h2>Our Services</h2>
             <div class="service-list ">
