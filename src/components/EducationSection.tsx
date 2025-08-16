@@ -93,7 +93,7 @@ export const EducationSection = () => {
                     <div className="mt-4 pt-4 border-t border-border/30">
                       <h4 className="text-sm font-semibold text-primary mb-2">Key Subjects:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {["Computer Science", "Physics", "Mathematics", "Programming"].map((subject) => (
+                        {["Computer Science", "Physics"].map((subject) => (
                           <span key={subject} className="px-2 py-1 bg-muted text-xs rounded-full">
                             {subject}
                           </span>
