@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cosmic Portfolio Design System - Journey Through the Cosmos of Technology */
+
+@layer base {
+  :root {
+    /* Cosmic Dark Theme */
+    --background: 220 25% 6%;
+    --foreground: 210 40% 92%;
+
+    /* Cosmic Cards */
+    --card: 220 20% 10%;
+    --card-foreground: 210 40% 92%;
+    --card-glow: 260 60% 50%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 40% 92%;
+
+    /* Cosmic Primary - Electric Blue */
+    --primary: 220 100% 60%;
+    --primary-foreground: 220 25% 6%;
+    --primary-glow: 220 100% 70%;
+
+    /* Cosmic Secondary - Purple Nebula */
+    --secondary: 260 60% 50%;
+    --secondary-foreground: 210 40% 92%;
+    --secondary-glow: 260 80% 60%;
+
+    /* Cosmic Accent - Cyan */
+    --accent: 180 100% 50%;
+    --accent-foreground: 220 25% 6%;
+    --accent-glow: 180 100% 60%;
+
+    /* Muted Cosmic Colors */
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 220 100% 60%;
+
+    /* Cosmic Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(220 100% 60%), hsl(260 60% 50%));
+    --gradient-nebula: linear-gradient(45deg, hsl(260 60% 50%), hsl(280 70% 40%));
+    --gradient-aurora: linear-gradient(90deg, hsl(180 100% 50%), hsl(220 100% 60%), hsl(260 60% 50%));
+    
+    /* Cosmic Shadows */
+    --shadow-cosmic: 0 25px 50px -12px hsl(220 100% 60% / 0.25);
+    --shadow-nebula: 0 20px 40px -10px hsl(260 60% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Cosmic animations and effects */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Text glow effects */
+  --text-glow-primary: 0 0 20px hsl(var(--primary-glow) / 0.5);
+  --text-glow-secondary: 0 0 20px hsl(var(--secondary-glow) / 0.5);
+  --text-glow-accent: 0 0 20px hsl(var(--accent-glow) / 0.5);
+  }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Cosmic Portfolio Styles */
+@layer components {
+  .cosmic-bg {
+    background: 
+      radial-gradient(ellipse at top, hsl(220 100% 60% / 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, hsl(260 60% 50% / 0.1) 0%, transparent 50%),
+      hsl(var(--background));
+    position: relative;
+  }
+
+  .cosmic-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.3), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.2), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: twinkle 8s infinite;
+    pointer-events: none;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  .section-glow {
+    background: linear-gradient(135deg, 
+      hsl(var(--card) / 0.8) 0%, 
+      hsl(var(--card) / 0.6) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-cosmic);
+    transition: var(--transition-smooth);
+  }
+
+  .section-glow:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-glow {
+    text-shadow: var(--text-glow-primary);
+  }
+
+  .text-glow-secondary {
+    text-shadow: var(--text-glow-secondary);
+  }
+
+  .text-glow-accent {
+    text-shadow: var(--text-glow-accent);
+  }
+
+  .cosmic-gradient {
+    background: var(--gradient-cosmic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nebula-gradient {
+    background: var(--gradient-nebula);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .aurora-gradient {
+    background: var(--gradient-aurora);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .typing-cursor::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: hsl(var(--primary));
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .skill-bar {
+    background: hsl(var(--muted));
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .skill-progress {
+    background: var(--gradient-cosmic);
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: width 2s ease-out;
+  }
+
+  .skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .project-card {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-radius: var(--radius);
+    transition: var(--transition-smooth);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-cosmic);
+    transition: var(--transition-smooth);
+  }
+
+  .project-card:hover::before {
+    left: 0;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: var(--shadow-cosmic);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1.5rem;
+    width: 2px;
+    height: calc(100% - 1rem);
+    background: linear-gradient(to bottom, hsl(var(--primary)), transparent);
+  }
+
+  .timeline-item:last-child::after {
+    display: none;
+  }
+}
